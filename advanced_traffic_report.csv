@@ -1,0 +1,7 @@
+time_of_day,is_raining,average_speed_mph,total_trips
+Evening Rush (4-7PM),False,9.405898457923389,760903
+Evening Rush (4-7PM),True,9.587689339716913,138350
+Morning Rush (7-9AM),False,10.964192016002212,377552
+Morning Rush (7-9AM),True,10.825825165123131,56430
+Off-Peak,False,11.085243042830092,2087293
+Off-Peak,True,11.194823471548924,266482
