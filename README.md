@@ -62,7 +62,10 @@ We ingest three distinct systems to model the workflow:
 5. Run the automated pipeline:
    * Open `pipeline_walkthrough.ipynb`
    * Click **Restart Kernel and Run All Cells**
-6. The pipeline outputs a flat analytical table: `output/advanced_traffic_report.csv` and visual charts.
+6. The pipeline generates the following runtime outputs:
+   * **Analytic Table:** `output/advanced_traffic_report.csv`
+   * **Visual Charts:** `output/bottleneck_chart.png` and `output/pandas_heatmap.png`
+   * **Execution Logs:** `output/pipeline.log` (Contains timestamps, dropped records, and execution states)
 
 ## 8. Knowns, Unknowns, Assumptions, and Limitations
 * **Assumption (Temporal):** We assumed Rush Hours are 7AM-9AM and 4PM-7PM (configurable in yaml).

@@ -1,0 +1,13 @@
+2026-09-25 17:56:03,266 [INFO] Initializing DOT Traffic Analysis Pipeline.
+2026-09-25 17:56:03,269 [INFO] ✅ Loaded Business Configurations from config.yaml
+2026-09-25 17:56:03,278 [INFO] Loading Parquet and CSV data...
+2026-09-25 17:56:03,447 [INFO] Fetching live historical weather data from Open-Meteo API...
+2026-09-25 17:56:04,133 [INFO] Successfully loaded 3,831,240 trips, 265 zones, and 720 hours of weather data.
+2026-09-25 17:56:05,091 [WARNING] Dropped 144,220 invalid rows (Negative time, zero distance, or physics violations).
+2026-09-25 17:56:05,097 [INFO] Applying temporal and weather logic...
+2026-09-25 17:56:07,425 [INFO] Calculating the absolute worst routes using YAML Configs...
+2026-09-25 17:56:07,807 [INFO] ✅ Pipeline complete! Top 15 Worst Corridors (> 1.5 miles, > 1000 trips):
+2026-09-25 17:56:08,394 [INFO] ✅ Saved Heatmap to output/pandas_heatmap.png
+2026-09-25 17:56:08,518 [INFO] ✅ Saved Chart to output/bottleneck_chart.png
+2026-09-25 17:56:08,573 [INFO] ✅ Saved CSV Data to output/advanced_traffic_report.csv
+2026-09-25 17:56:08,574 [INFO] ✅ Pipeline execution finished successfully.
