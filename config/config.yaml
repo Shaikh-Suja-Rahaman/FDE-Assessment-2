@@ -1,0 +1,28 @@
+# DOT Traffic Pipeline Configuration
+
+# Data Sources
+data_sources:
+  trip_data_parquet: "data/raw/yellow_tripdata_2026-04.parquet"
+  zone_data_csv: "data/raw/taxi_zone_lookup.csv"
+  weather_api_url: "https://archive-api.open-meteo.com/v1/archive"
+  weather_latitude: 40.7143
+  weather_longitude: -74.0060
+  weather_start_date: "2026-04-01"
+  weather_end_date: "2026-04-30"
+
+# Pipeline Data Cleaning Parameters
+data_cleaning:
+  max_speed_mph_outlier: 80
+
+# Workflow / Modeling Parameters
+business_logic:
+  morning_rush_start_hour: 7
+  morning_rush_end_hour: 9
+  evening_rush_start_hour: 16
+  evening_rush_end_hour: 19
+
+# Advanced Metrics Parameters (Stakeholder Configurable)
+metrics:
+  min_total_trips: 1000
+  min_distance_miles: 1.5
+  top_n_worst_routes: 15

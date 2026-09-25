@@ -1,0 +1,8 @@
+pandas
+pyarrow
+fastparquet
+requests
+pyyaml
+matplotlib
+seaborn
+dataframe-image

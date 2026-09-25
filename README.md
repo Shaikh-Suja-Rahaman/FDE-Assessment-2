@@ -56,16 +56,32 @@ We ingest three distinct systems to model the workflow:
 
 ## 7. Setup and Run Instructions
 1. Ensure Python 3.9+ is installed.
-2. Install dependencies: `pip install pandas pyarrow fastparquet jupyter requests matplotlib seaborn pyyaml`
-3. Ensure the Parquet and CSV files are in the `data/` directory.
-4. (Optional) Adjust business parameters in `config.yaml`.
-5. Run the automated pipeline:
-   * Open `pipeline_walkthrough.ipynb`
-   * Click **Restart Kernel and Run All Cells**
-6. The pipeline generates the following runtime outputs:
-   * **Analytic Table:** `output/advanced_traffic_report.csv`
-   * **Visual Charts:** `output/bottleneck_chart.png` and `output/pandas_heatmap.png`
-   * **Execution Logs:** `output/pipeline.log` (Contains timestamps, dropped records, and execution states)
+2. Create and activate a virtual environment:
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. Ensure the Parquet and CSV files are in the `data/raw/` directory.
+5. (Optional) Adjust business parameters in `config/config.yaml`.
+6. Run the pipeline. You have two options:
+   
+   **Option A: Production Execution (Modular)**
+   ```bash
+   python run_pipeline.py
+   ```
+   *Generates a date-stamped folder in `data/processed/` containing four artifacts:*
+   * `advanced_traffic_report.csv` (Analytic Table)
+   * `run_metadata.json` (Configuration parameters used)
+   * `pandas_heatmap.png` (Visual Breakdown)
+   * `bottleneck_chart.png` (Executive Bar Chart)
+
+   **Option B: Interactive Presentation (Visual)**
+   * Open `pipeline_walkthrough.ipynb` in VSCode or Jupyter.
+   * Click **Restart Kernel and Run All Cells** to view the dynamic heatmaps and charts inline.
 
 ## 8. Knowns, Unknowns, Assumptions, and Limitations
 * **Assumption (Temporal):** We assumed Rush Hours are 7AM-9AM and 4PM-7PM (configurable in yaml).

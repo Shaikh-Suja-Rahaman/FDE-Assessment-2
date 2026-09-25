@@ -1,0 +1,17 @@
+# Virtual Environment
+venv/
+.env
+
+# Python Caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Data & Outputs
+data/raw/*.parquet
+data/raw/*.csv
+data/processed/
+logs/
+
+# OS Files
+.DS_Store
