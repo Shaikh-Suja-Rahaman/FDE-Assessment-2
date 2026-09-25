@@ -8,9 +8,12 @@
 ## 2. Project KPI & Metrics
 **Primary Business KPI:** Average Route Speed (Goal: Increase the average MPH on critical bottlenecks to reduce city-wide congestion).
 **Operational Metrics Derived:**
-1. **Overall Route Speed (MPH):** Distance divided by time to isolate the worst bottlenecks.
-2. **Temporal Impact:** Categorizing trip speeds by time of day (Morning Rush vs Evening Rush).
-3. **Weather Impact:** Correlating average route speed with hourly rainfall data.
+To satisfy the business requirement of analyzing traffic workflows, the pipeline calculates 5 core operational metrics for every route:
+1. **Average Route Speed (MPH):** The core metric used to rank and identify the most severe bottlenecks (`trip_distance` / `trip_duration`).
+2. **Total Route Volume (Trips):** The demand indicator and sample size for the corridor (Minimum 1000 trips required per config).
+3. **Average Corridor Distance (Miles):** The physical length of the route, used to filter out non-actionable "micro-trips".
+4. **Adverse Weather Speed Delta:** The drop in average speed specifically caused by hourly precipitation (Rain = True vs False).
+5. **Rush Hour Speed Delta:** The variance in traffic speeds during configurable peak windows (e.g., 4PM-7PM) versus off-peak hours.
 
 ## 3. Engineering Judgement Call
 During initial data exploration, the absolute slowest routes were found to be "micro-trips" (e.g., trips less than 0.5 miles long). These trips have an inherently slow average speed due to starting, stopping, and waiting at a single red light, which artificially depresses the metric. 
