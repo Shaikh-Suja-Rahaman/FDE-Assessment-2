@@ -12,9 +12,9 @@
 2. **Temporal Impact:** Categorizing trip speeds by time of day (Morning Rush vs Evening Rush).
 3. **Weather Impact:** Correlating average route speed with hourly rainfall data.
 
-## 3. Engineering Judgement Call (The FDE Mindset)
+## 3. Engineering Judgement Call
 During initial data exploration, the absolute slowest routes were found to be "micro-trips" (e.g., trips less than 0.5 miles long). These trips have an inherently slow average speed due to starting, stopping, and waiting at a single red light, which artificially depresses the metric. 
-**The FDE Call:** Presenting 3-block micro-trips to the DOT is not actionable. They need to fix structural corridors. Therefore, a **1.5-mile minimum distance filter** was applied to the pipeline aggregation to eliminate the micro-trip noise. 
+**The Call:** Presenting 3-block micro-trips to the DOT is not actionable. They need to fix structural corridors. Therefore, a **1.5-mile minimum distance filter** was applied to the pipeline aggregation to eliminate the micro-trip noise. 
 **Stakeholder Alignment:** Rather than hard-coding this 1.5-mile filter in the engineering logic, this pipeline utilizes a `config.yaml` file. This empowers the DOT stakeholders to define what constitutes a "corridor", taking ownership of the business policy while the pipeline handles the execution.
 
 ## 4. Configuration Driven Architecture
