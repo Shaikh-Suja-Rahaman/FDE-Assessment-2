@@ -40,7 +40,7 @@ Below is a snapshot of the top 5 worst traffic corridors in NYC, broken down by 
 
 ![NYC Bottleneck Chart](assets/bottleneck_chart.png)
 
-## 6. Source Overview (Multi-Modal Retrieval - Class 5)
+## 6. Source Overview
 We ingest three distinct systems to model the workflow:
 1. **Trip Data (Parquet):** `yellow_tripdata_2026-04.parquet` from the official NYC TLC website. This provides the raw transaction grain (1 row = 1 taxi trip).
 2. **Zone Data (CSV):** `taxi_zone_lookup.csv` via the NYC TLC AWS CloudFront bucket. Maps arbitrary Location IDs to human-readable neighborhood routes.
@@ -56,7 +56,7 @@ We ingest three distinct systems to model the workflow:
    * Click **Restart Kernel and Run All Cells**
 6. The pipeline outputs a flat analytical table: `output/advanced_traffic_report.csv` and visual charts.
 
-## 8. Knowns, Unknowns, Assumptions, and Limitations (Class 6)
+## 8. Knowns, Unknowns, Assumptions, and Limitations
 * **Assumption (Temporal):** We assumed Rush Hours are 7AM-9AM and 4PM-7PM (configurable in yaml).
 * **Assumption (Weather Geospatial):** The weather API uses a single central coordinate for Manhattan (Lat 40.71, Lon -74.00). Since NYC is geographically dense, this is a highly acceptable statistical proxy for city-wide weather in a V1 prototype. A V2 architecture could geocode individual taxi zones for micro-climate accuracy.
 * **Assumption (Weather Temporal):** We floor the trip pickup time to the nearest hour to join with the hourly weather API.
