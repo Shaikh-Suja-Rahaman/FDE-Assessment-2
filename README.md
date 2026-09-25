@@ -67,4 +67,5 @@ We ingest three distinct systems to model the workflow:
 * **Future Work:** To answer the "why", Version 2.0 of this pipeline would require a complex Geospatial Join with the NYC 311 Complaints API or NYPD Collision dataset. 
 * **Known (Data Quality):** Raw taxi data contains impossible physics (negative times, 0 distances, 100+ mph speeds). Our pipeline proactively validates and drops these outliers.
 
+## 9. Detailed Pipeline Architecture
 ![Architecuture](assets/architecture.png)
