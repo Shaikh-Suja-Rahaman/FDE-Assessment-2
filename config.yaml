@@ -1,5 +1,15 @@
 # DOT Traffic Pipeline Configuration
 
+# Data Sources
+data_sources:
+  trip_data_parquet: "data/yellow_tripdata_2026-04.parquet"
+  zone_data_csv: "data/taxi_zone_lookup.csv"
+  weather_api_url: "https://archive-api.open-meteo.com/v1/archive"
+  weather_latitude: 40.7143
+  weather_longitude: -74.0060
+  weather_start_date: "2026-04-01"
+  weather_end_date: "2026-04-30"
+
 # Pipeline Data Cleaning Parameters
 data_cleaning:
   max_speed_mph_outlier: 80
