@@ -1,0 +1,18 @@
+# DOT Traffic Pipeline Configuration
+
+# Pipeline Data Cleaning Parameters
+data_cleaning:
+  max_speed_mph_outlier: 80
+
+# Workflow / Modeling Parameters
+business_logic:
+  morning_rush_start_hour: 7
+  morning_rush_end_hour: 9
+  evening_rush_start_hour: 16
+  evening_rush_end_hour: 19
+
+# Advanced Metrics Parameters (Stakeholder Configurable)
+metrics:
+  min_total_trips: 1000
+  min_distance_miles: 1.5
+  top_n_worst_routes: 15
