@@ -1,6 +1,6 @@
 # NYC TLC Traffic Analysis Pipeline (DOT Use Case)
 
-[![Watch the video](https://cdn.loom.com/sessions/thumbnails/d07f3d8dd84048a79f690a07207cba83-with-play.gif)](https://www.loom.com/share/d07f3d8dd84048a79f690a07207cba83)
+### [Watch the 5-Minute FDE Presentation Video Here](https://www.loom.com/share/d07f3d8dd84048a79f690a07207cba83)
 ## 1. Problem Statement & Stakeholders
 **Stakeholder:** NYC Department of Transportation (DOT)
 **Business Problem:** The DOT has a $50M congestion mitigation budget. They are experiencing severe city-wide traffic but have zero visibility into *where* the absolute worst bottlenecks are, or *when* they are most vulnerable to complete gridlock. 
