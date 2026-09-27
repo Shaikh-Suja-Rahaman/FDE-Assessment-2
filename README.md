@@ -5,7 +5,7 @@
 **Business Problem:** The DOT has a $50M congestion mitigation budget. They are experiencing severe city-wide traffic but have zero visibility into *where* the absolute worst bottlenecks are, or *when* they are most vulnerable to complete gridlock. 
 **Decision Supported:** The DOT needs to know exactly **where** to allocate their infrastructure budget (e.g., adding traffic cops, re-timing lights) and **when** to halt road construction to avoid exacerbating delays.
 
-## 2. The FDE Engineering Approach
+## 2. The Approach
 Stakeholders rarely hand engineers perfectly modeled requirements. To solve the DOT's vague mandate of "fix traffic," this pipeline proactively models two critical external factors that destroy traffic flow:
 1. **Temporal Impact:** Categorizing trips into configurable "Rush Hour" vs "Off-Peak" windows.
 2. **Environmental Impact:** Joining trip data with an external Weather API to correlate precipitation with severe speed drops.
